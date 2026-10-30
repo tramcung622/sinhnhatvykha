@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-handwriting: var(--font-handwriting), "Dancing Script", cursive;
+
+  --color-cream-light: #FFFDF9;
+  --color-cream: #FAF4EB;
+  --color-cream-dark: #F3E9DA;
+  --color-paper: #FFFDF7;
+  --color-paper-card: #FCF9F2;
+  
+  --color-pink-soft: #FDF2F5;
+  --color-pink-pastel: #FCE7EC;
+  --color-pink-rose: #F8CAD5;
+  --color-pink-warm: #F4A5B9;
+  --color-pink-accent: #E87293;
+  
+  --color-burgundy-soft: #B83A5D;
+  --color-burgundy: #9B1B48;
+  --color-burgundy-deep: #701133;
+  --color-burgundy-dark: #4A0820;
+
+  --color-gold-soft: #F9E8D2;
+  --color-gold-rose: #E5AC99;
+  --color-gold-accent: #CFA06E;
+  --color-gold-rich: #B07D46;
+}
+
+:root {
+  --background: #FFFDF9;
+  --foreground: #4A3B43;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(252, 231, 236, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(248, 202, 213, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(250, 244, 235, 0.5) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Scrapbook and Polaroid Styles */
+.scrapbook-paper {
+  background-color: #FFFDF8;
+  box-shadow: 
+    0 1px 3px rgba(112, 17, 51, 0.05),
+    0 10px 25px -5px rgba(112, 17, 51, 0.08),
+    inset 0 0 40px rgba(243, 233, 218, 0.35);
+  border: 1px solid rgba(230, 215, 200, 0.6);
+}
+
+.polaroid-frame {
+  background-color: #FFFFFF;
+  box-shadow: 
+    0 4px 6px -1px rgba(74, 8, 32, 0.06),
+    0 12px 28px -4px rgba(74, 8, 32, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.polaroid-frame:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 12px -2px rgba(155, 27, 72, 0.12),
+    0 20px 35px -6px rgba(155, 27, 72, 0.2);
+}
+
+/* Washi Tape Effects */
+.washi-tape-pink {
+  background: rgba(248, 202, 213, 0.75);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 2px dashed rgba(255, 255, 255, 0.6);
+  border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+.washi-tape-gold {
+  background: rgba(229, 172, 153, 0.72);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 2px dashed rgba(255, 255, 255, 0.6);
+  border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+.washi-tape-cream {
+  background: rgba(243, 233, 218, 0.85);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 2px dashed rgba(255, 255, 255, 0.6);
+  border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+/* Stamp Border */
+.postage-stamp {
+  background: #FFFDF8;
+  border: 1px dashed #E5AC99;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF4EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F8CAD5;
+  border-radius: 9999px;
+  border: 2px solid #FAF4EB;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E87293;
+}
+
+/* 3D Box Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Soft Animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
