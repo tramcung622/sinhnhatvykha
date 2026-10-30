@@ -18,6 +18,6 @@ export const BIRTHDAY_CONFIG = {
   music: {
     title: "Happy Birthday Vy Kha 🌸",
     artist: "Romantic Birthday Melody",
-    audioSrc: "/audio/birthday-song.mp3",
+    audioSrc: "/audio/nhacsinhnhat.mp3",
   },
 };
